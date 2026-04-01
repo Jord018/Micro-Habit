@@ -1,0 +1,13 @@
+/build
+/proguard
+/release
+/debug
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+local.properties
