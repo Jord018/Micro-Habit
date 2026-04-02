@@ -36,3 +36,4 @@ out/
 proguard/
 *.keystore
 !debug.keystore
+/.idea
