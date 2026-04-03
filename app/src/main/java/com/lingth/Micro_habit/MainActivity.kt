@@ -28,7 +28,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -42,8 +46,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.room.Room
+import com.lingth.Micro_habit.database.AppDatabase
+import com.lingth.Micro_habit.database.User
 import com.lingth.Micro_habit.ui.AuroraBackground
 import com.lingth.Micro_habit.ui.theme.HabitFlowTheme
+import com.lingth.Micro_habit.view.AddHabitScreen
 import com.lingth.Micro_habit.view.DashboardScreen
 import com.lingth.Micro_habit.view.HabitLibraryScreen
 import com.lingth.Micro_habit.view.InsightsScreen
@@ -54,12 +62,16 @@ import com.lingth.Micro_habit.viewmodel.DashboardViewModel
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "database-name"
+        ).build()
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContent {
             HabitFlowTheme {
                 val navController = rememberNavController()
+                val coroutineScope = rememberCoroutineScope()
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
                 // Default to false if currentRoute is null to avoid premature rendering
@@ -75,7 +87,7 @@ class MainActivity : ComponentActivity() {
                     floatingActionButton = {
                         if (showBars && currentRoute == "dashboard") {
                             FloatingActionButton(
-                                onClick = { /* TODO */ },
+                                onClick = { navController.navigate("add_habit") },
                                 containerColor = MaterialTheme.colorScheme.secondary,
                                 contentColor = MaterialTheme.colorScheme.onSecondary,
                                 shape = RoundedCornerShape(16.dp)
@@ -115,6 +127,11 @@ class MainActivity : ComponentActivity() {
                             }
                             composable("profile") {
                                 ProfileScreen()
+                            }
+                            composable("add_habit") {
+                                AddHabitScreen(onBackClick = {
+                                    navController.popBackStack()
+                                })
                             }
                         }
                     }

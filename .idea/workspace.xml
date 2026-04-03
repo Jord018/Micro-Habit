@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6775312-2826-4a72-8bf2-0b3c1d0b6dbf" name="Changes" comment="Initialize Android project with Jetpack Compose and Material 3&#10;&#10;This commit sets up the initial project structure for &quot;Micro_habit&quot; using modern Android development practices, including:&#10;&#10;*   **Build System**: Configures Gradle using Kotlin DSL (`.gradle.kts`) and Version Catalogs (`libs.versions.toml`).&#10;*   **SDK Configuration**: Targets Android SDK 36 with a minimum supported SDK of 31.&#10;*   **UI Framework**: Integrates Jetpack Compose with the standard Material 3 theme, including typography and color schemes.&#10;*   **Boilerplate**: Includes the default `MainActivity`, launcher icons, unit/instrumented test templates, and ProGuard rules.&#10;*   **Project Environment**: Adds Gradle wrapper scripts and essential `.gitignore` files for the IDE and build artifacts." />
+    <list default="true" id="e6775312-2826-4a72-8bf2-0b3c1d0b6dbf" name="Changes" comment="Implement navigation and core feature screens for Habit-Flow AI&#10;&#10;This commit establishes the primary navigation architecture and feature screens for the application, utilizing Jetpack Compose and Material 3 with a custom dark-themed glass-morphism aesthetic. Key updates include:&#10;&#10;*   **Navigation &amp; Architecture**: Integrates `androidx.navigation` with a centralized `NavHost` in `MainActivity`. Adds a `DashboardViewModel` to manage UI state via `StateFlow` and handle habit completion logic.&#10;*   **Feature Screens**:&#10;    *   **Onboarding**: An entry screen featuring brand messaging and a &quot;Get Started&quot; flow.&#10;    *   **Dashboard**: A central hub featuring a &quot;Flow Score&quot; progress ring, bento-style stats cards, and recent activity history.&#10;    *   **Habit Library**: A management interface for toggling active habits and constructing new micro-flows.&#10;    *   **Insights**: An analytics view providing weekly consistency charts and AI-driven behavioral predictions.&#10;*   **UI Components**: Develops a library of reusable &quot;glass&quot; components, including `GlassCard`, `AuroraBackground` (animated-style gradients), `ProgressRing`, and a custom-styled bottom navigation bar.&#10;*   **Design System**: Overhauls the color palette and `MaterialTheme` to implement a deep-dark theme with specialized surface variants and high-contrast primary/secondary accents.&#10;*   **Build Environment**: Updates `libs.versions.toml` and `build.gradle.kts` with dependencies for Navigation, ViewModels, and Extended Icons. Optimizes Gradle memory settings for improved build performance.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/database/Dao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/database/Entity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/database/database.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/view/AddHabitScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.0-milestone-5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lingth/Micro_habit/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +44,17 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +72,9 @@
   }
 }</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\ken98\.gradle\wrapper\dists\gradle-9.5.0-milestone-5-bin\366juk94y4up54ub4rlcvvmn3\gradle-9.5.0-milestone-5" javaHome="C:\Program Files\Android\Android Studio1\jbr" gradleVersion="9.5.0-milestone-5" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5,
   &quot;fromUser&quot;: false
@@ -55,14 +90,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Android App.app.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
@@ -155,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775049711662</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Android Studio project configuration and IDE metadata&#10;&#10;This commit initializes the `.idea` folder and Gradle environment files required to manage the project within Android Studio, including:&#10;&#10;*   **IDE Configuration**: Sets up the Gradle project system, VCS mappings, and project-level metadata using JDK 21.&#10;*   **Run &amp; Deployment**: Configures deployment target selectors and ignored run configuration producers for improved IDE performance.&#10;*   **Device Streaming**: Adds a comprehensive cache of persistent device selection data for remote device streaming.&#10;*   **App Insights**: Initializes configuration for Android Vitals monitoring.&#10;*   **Build Environment**: Sets up the Gradle wrapper properties and build output cleanup caches.">
+      <option name="closed" value="true" />
+      <created>1775050231610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775050231610</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement navigation and core feature screens for Habit-Flow AI&#10;&#10;This commit establishes the primary navigation architecture and feature screens for the application, utilizing Jetpack Compose and Material 3 with a custom dark-themed glass-morphism aesthetic. Key updates include:&#10;&#10;*   **Navigation &amp; Architecture**: Integrates `androidx.navigation` with a centralized `NavHost` in `MainActivity`. Adds a `DashboardViewModel` to manage UI state via `StateFlow` and handle habit completion logic.&#10;*   **Feature Screens**:&#10;    *   **Onboarding**: An entry screen featuring brand messaging and a &quot;Get Started&quot; flow.&#10;    *   **Dashboard**: A central hub featuring a &quot;Flow Score&quot; progress ring, bento-style stats cards, and recent activity history.&#10;    *   **Habit Library**: A management interface for toggling active habits and constructing new micro-flows.&#10;    *   **Insights**: An analytics view providing weekly consistency charts and AI-driven behavioral predictions.&#10;*   **UI Components**: Develops a library of reusable &quot;glass&quot; components, including `GlassCard`, `AuroraBackground` (animated-style gradients), `ProgressRing`, and a custom-styled bottom navigation bar.&#10;*   **Design System**: Overhauls the color palette and `MaterialTheme` to implement a deep-dark theme with specialized surface variants and high-contrast primary/secondary accents.&#10;*   **Build Environment**: Updates `libs.versions.toml` and `build.gradle.kts` with dependencies for Navigation, ViewModels, and Extended Icons. Optimizes Gradle memory settings for improved build performance.">
+      <option name="closed" value="true" />
+      <created>1775105031110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775105031110</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,7 +217,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -171,6 +237,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize Android project with Jetpack Compose and Material 3&#10;&#10;This commit sets up the initial project structure for &quot;Micro_habit&quot; using modern Android development practices, including:&#10;&#10;*   **Build System**: Configures Gradle using Kotlin DSL (`.gradle.kts`) and Version Catalogs (`libs.versions.toml`).&#10;*   **SDK Configuration**: Targets Android SDK 36 with a minimum supported SDK of 31.&#10;*   **UI Framework**: Integrates Jetpack Compose with the standard Material 3 theme, including typography and color schemes.&#10;*   **Boilerplate**: Includes the default `MainActivity`, launcher icons, unit/instrumented test templates, and ProGuard rules.&#10;*   **Project Environment**: Adds Gradle wrapper scripts and essential `.gitignore` files for the IDE and build artifacts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize Android project with Jetpack Compose and Material 3&#10;&#10;This commit sets up the initial project structure for &quot;Micro_habit&quot; using modern Android development practices, including:&#10;&#10;*   **Build System**: Configures Gradle using Kotlin DSL (`.gradle.kts`) and Version Catalogs (`libs.versions.toml`).&#10;*   **SDK Configuration**: Targets Android SDK 36 with a minimum supported SDK of 31.&#10;*   **UI Framework**: Integrates Jetpack Compose with the standard Material 3 theme, including typography and color schemes.&#10;*   **Boilerplate**: Includes the default `MainActivity`, launcher icons, unit/instrumented test templates, and ProGuard rules.&#10;*   **Project Environment**: Adds Gradle wrapper scripts and essential `.gitignore` files for the IDE and build artifacts." />
+    <MESSAGE value="Add Android Studio project configuration and IDE metadata&#10;&#10;This commit initializes the `.idea` folder and Gradle environment files required to manage the project within Android Studio, including:&#10;&#10;*   **IDE Configuration**: Sets up the Gradle project system, VCS mappings, and project-level metadata using JDK 21.&#10;*   **Run &amp; Deployment**: Configures deployment target selectors and ignored run configuration producers for improved IDE performance.&#10;*   **Device Streaming**: Adds a comprehensive cache of persistent device selection data for remote device streaming.&#10;*   **App Insights**: Initializes configuration for Android Vitals monitoring.&#10;*   **Build Environment**: Sets up the Gradle wrapper properties and build output cleanup caches." />
+    <MESSAGE value="Implement navigation and core feature screens for Habit-Flow AI&#10;&#10;This commit establishes the primary navigation architecture and feature screens for the application, utilizing Jetpack Compose and Material 3 with a custom dark-themed glass-morphism aesthetic. Key updates include:&#10;&#10;*   **Navigation &amp; Architecture**: Integrates `androidx.navigation` with a centralized `NavHost` in `MainActivity`. Adds a `DashboardViewModel` to manage UI state via `StateFlow` and handle habit completion logic.&#10;*   **Feature Screens**:&#10;    *   **Onboarding**: An entry screen featuring brand messaging and a &quot;Get Started&quot; flow.&#10;    *   **Dashboard**: A central hub featuring a &quot;Flow Score&quot; progress ring, bento-style stats cards, and recent activity history.&#10;    *   **Habit Library**: A management interface for toggling active habits and constructing new micro-flows.&#10;    *   **Insights**: An analytics view providing weekly consistency charts and AI-driven behavioral predictions.&#10;*   **UI Components**: Develops a library of reusable &quot;glass&quot; components, including `GlassCard`, `AuroraBackground` (animated-style gradients), `ProgressRing`, and a custom-styled bottom navigation bar.&#10;*   **Design System**: Overhauls the color palette and `MaterialTheme` to implement a deep-dark theme with specialized surface variants and high-contrast primary/secondary accents.&#10;*   **Build Environment**: Updates `libs.versions.toml` and `build.gradle.kts` with dependencies for Navigation, ViewModels, and Extended Icons. Optimizes Gradle memory settings for improved build performance." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement navigation and core feature screens for Habit-Flow AI&#10;&#10;This commit establishes the primary navigation architecture and feature screens for the application, utilizing Jetpack Compose and Material 3 with a custom dark-themed glass-morphism aesthetic. Key updates include:&#10;&#10;*   **Navigation &amp; Architecture**: Integrates `androidx.navigation` with a centralized `NavHost` in `MainActivity`. Adds a `DashboardViewModel` to manage UI state via `StateFlow` and handle habit completion logic.&#10;*   **Feature Screens**:&#10;    *   **Onboarding**: An entry screen featuring brand messaging and a &quot;Get Started&quot; flow.&#10;    *   **Dashboard**: A central hub featuring a &quot;Flow Score&quot; progress ring, bento-style stats cards, and recent activity history.&#10;    *   **Habit Library**: A management interface for toggling active habits and constructing new micro-flows.&#10;    *   **Insights**: An analytics view providing weekly consistency charts and AI-driven behavioral predictions.&#10;*   **UI Components**: Develops a library of reusable &quot;glass&quot; components, including `GlassCard`, `AuroraBackground` (animated-style gradients), `ProgressRing`, and a custom-styled bottom navigation bar.&#10;*   **Design System**: Overhauls the color palette and `MaterialTheme` to implement a deep-dark theme with specialized surface variants and high-contrast primary/secondary accents.&#10;*   **Build Environment**: Updates `libs.versions.toml` and `build.gradle.kts` with dependencies for Navigation, ViewModels, and Extended Icons. Optimizes Gradle memory settings for improved build performance." />
   </component>
 </project>
