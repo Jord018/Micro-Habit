@@ -62,16 +62,11 @@ import com.lingth.Micro_habit.viewmodel.DashboardViewModel
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "database-name"
-        ).build()
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContent {
             HabitFlowTheme {
                 val navController = rememberNavController()
-                val coroutineScope = rememberCoroutineScope()
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
                 // Default to false if currentRoute is null to avoid premature rendering
